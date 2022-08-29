@@ -1,7 +1,4 @@
-from array import array
-from ast import Str
 import os
-from turtle import title
 from flask import Flask, request, jsonify, abort
 from sqlalchemy import exc
 import json
@@ -38,7 +35,7 @@ def create_app(test_config=None):
     
 
     @app.route('/drinks', methods=['GET'])
-    def short_drinks(self):
+    def short_drinks():
         try:
             drinks = Drink.query.all()
             return jsonify  (
